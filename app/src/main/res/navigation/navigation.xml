@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmento1">
+
+    <fragment
+        android:id="@+id/fragmento1"
+        android:name="com.example.desafio_.fragmento1"
+        android:label="fragmento1"
+        tools:layout="@layout/fragmento1">
+        <action
+            android:id="@+id/actiontela1paratela2"
+            app:destination="@id/segundofragmento" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundofragmento"
+        android:name="com.example.desafio_.segundofragmento"
+        android:label="fragment_segundofragmento"
+        tools:layout="@layout/fragment_segundofragmento" >
+        <action
+            android:id="@+id/actiontela2paratela3"
+            app:destination="@id/terceirofragmento" />
+        <action
+            android:id="@+id/actiontela2paratela1"
+            app:destination="@id/fragmento1" />
+        />
+    </fragment>
+    <fragment
+        android:id="@+id/terceirofragmento"
+        android:name="com.example.desafio_.terceirofragmento"
+        android:label="fragment_terceirofragmento"
+        tools:layout="@layout/fragment_terceirofragmento" >
+        <action
+            android:id="@+id/actiontela3paratela1"
+            app:destination="@id/fragmento1" />
+        <argument
+            android:name="nome"
+            app:argType="string" />
+
+    </fragment>
+</navigation>
