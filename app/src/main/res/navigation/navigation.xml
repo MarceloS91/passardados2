@@ -7,33 +7,33 @@
 
     <fragment
         android:id="@+id/fragmento1"
-        android:name="com.example.desafio_.fragmento1"
+        android:name="com.example.desafio_.PrimeiroFragmento"
         android:label="fragmento1"
-        tools:layout="@layout/fragmento1">
+        tools:layout="@layout/primeiro_fragmento">
         <action
-            android:id="@+id/actiontela1paratela2"
+            android:id="@+id/actionTela1ParaTela2"
             app:destination="@id/segundofragmento" />
     </fragment>
     <fragment
         android:id="@+id/segundofragmento"
-        android:name="com.example.desafio_.segundofragmento"
+        android:name="com.example.desafio_.SegundoFragmento"
         android:label="fragment_segundofragmento"
-        tools:layout="@layout/fragment_segundofragmento" >
+        tools:layout="@layout/segundo_fragmento" >
         <action
-            android:id="@+id/actiontela2paratela3"
-            app:destination="@id/terceirofragmento" />
+            android:id="@+id/actionTela2ParaTela3"
+            app:destination="@id/terceiroFragmento" />
         <action
-            android:id="@+id/actiontela2paratela1"
+            android:id="@+id/actionTela2ParaTela1"
             app:destination="@id/fragmento1" />
         />
     </fragment>
     <fragment
-        android:id="@+id/terceirofragmento"
-        android:name="com.example.desafio_.terceirofragmento"
+        android:id="@+id/terceiroFragmento"
+        android:name="com.example.desafio_.TerceiroFragmento"
         android:label="fragment_terceirofragmento"
-        tools:layout="@layout/fragment_terceirofragmento" >
+        tools:layout="@layout/terceiro_fragmento" >
         <action
-            android:id="@+id/actiontela3paratela1"
+            android:id="@+id/actionTela3ParaTela1"
             app:destination="@id/fragmento1" />
         <argument
             android:name="nome"

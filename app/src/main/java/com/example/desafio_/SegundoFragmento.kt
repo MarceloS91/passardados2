@@ -5,24 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.TextView
-import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 
-class segundofragmento : Fragment(R.layout.fragment_segundofragmento) {
+class SegundoFragmento : Fragment(R.layout.segundo_fragmento) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val data = view.findViewById<EditText>(R.id.edittextnome)
+        val data = view.findViewById<EditText>(R.id.editTextNome)
 
-            view.findViewById<Button>(R.id.button2).setOnClickListener {
-            val action = segundofragmentoDirections.actiontela2paratela3(
+            view.findViewById<Button>(R.id.buttonEnviar).setOnClickListener {
+            val action = SegundoFragmentoDirections.actionTela2ParaTela3(
                 "${data.text}")
 
             view.findViewById<TextView>(R.id.imageButtonvoltar).setOnClickListener {
-                findNavController().navigate(R.id.actiontela2paratela1)
+                findNavController().navigate(R.id.actionTela2ParaTela1)
 
                 findNavController().navigate(action)
                 
